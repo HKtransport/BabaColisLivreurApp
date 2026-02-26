@@ -19,6 +19,13 @@ jobs:
         with:
           channel: stable
 
+      - name: Clean Flutter
+        working-directory: BabaColisLivreurApp
+        run: flutter clean
+
+      - name: Clean Android folder
+        run: rm -rf BabaColisLivreurApp/android/.android
+
       - name: Install dependencies
         working-directory: BabaColisLivreurApp
         run: flutter pub get
