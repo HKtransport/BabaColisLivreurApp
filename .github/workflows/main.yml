@@ -20,13 +20,15 @@ jobs:
           channel: stable
 
       - name: Install dependencies
+        working-directory: BabaColisLivreurApp
         run: flutter pub get
 
       - name: Build APK
+        working-directory: BabaColisLivreurApp
         run: flutter build apk --release
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: app-release
-          path: build/app/outputs/flutter-apk/app-release.apk
+          path: BabaColisLivreurApp/build/app/outputs/flutter-apk/app-release.apk
