@@ -23,7 +23,7 @@ jobs:
         working-directory: BabaColisLivreurApp
         run: flutter clean
 
-      - name: Clean Android folder
+      - name: Remove old Android embedding
         run: rm -rf BabaColisLivreurApp/android/.android
 
       - name: Install dependencies
